@@ -1,0 +1,117 @@
+\section{Ant Class Reference}
+\label{classAnt}\index{Ant@{Ant}}
+
+
+{\ttfamily \#include $<$Ant.\+h$>$}
+
+Inheritance diagram for Ant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant} (int r=0, int c=0, bool s=false)
+\item 
+bool \textbf{ move} (\textbf{ Grid} $\ast$g, int n)
+\item 
+bool \textbf{ breed} (\textbf{ Grid} $\ast$g, int n)
+\item 
+virtual \textbf{ $\sim$\+Ant} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classAnt_ae4f5d63f7f1a820528ddd28b9913a284}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{Ant()}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}\item[{int}]{r = {\ttfamily 0},  }\item[{int}]{c = {\ttfamily 0},  }\item[{bool}]{s = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructs an \doxyref{Ant}{p.}{classAnt} and stores the given row and column. 
+\begin{DoxyParams}{Parameters}
+{\em r} & row to place \doxyref{Ant}{p.}{classAnt} \\
+\hline
+{\em c} & column to place \doxyref{Ant}{p.}{classAnt} \\
+\hline
+{\em s} & true if the \doxyref{Ant}{p.}{classAnt} should be skipped; false otherwise \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by breed().
+
+\mbox{\label{classAnt_a33ca6bd592236726a18a2159908e4116}} 
+\index{Ant@{Ant}!````~Ant@{$\sim$\+Ant}}
+\index{````~Ant@{$\sim$\+Ant}!Ant@{Ant}}
+\subsubsection{$\sim$\+Ant()}
+{\footnotesize\ttfamily Ant\+::$\sim$\+Ant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructs an \doxyref{Ant}{p.}{classAnt}. Death of \doxyref{Ant}{p.}{classAnt} occurs when consumed by \doxyref{Doodlebug}{p.}{classDoodlebug}. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classAnt_af5d0af0b6e6be8526875773378627666}} 
+\index{Ant@{Ant}!breed@{breed}}
+\index{breed@{breed}!Ant@{Ant}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily bool Ant\+::breed (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{g,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gives birth to an \doxyref{Ant}{p.}{classAnt} in a randomly chosen empty adjacent cell. Can only give birth after surviving 3 steps. No birth occurs if all adjacent cells are occupied. Can give birth on next step if all adjacent cells are occupied. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The grid with the organisms \\
+\hline
+{\em n} & The number of cells on an edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if \doxyref{Ant}{p.}{classAnt} gave birth; false otherwise 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_a62e6c3a58974180f039c24889c5e6141}.
+
+
+
+References ant, Ant(), Organism\+::col, down, left, Organism\+::orig\+Col, Organism\+::orig\+Row, right, Organism\+::row, Grid\+::set\+Cell\+Occupant(), stay, Organism\+::steps\+Since\+Breed, Organism\+::target\+Cell(), and up.
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), and Production\+::one\+Ant\+Step().
+
+\mbox{\label{classAnt_a2f7075f92830a8ce07f868c3feb68720}} 
+\index{Ant@{Ant}!move@{move}}
+\index{move@{move}!Ant@{Ant}}
+\subsubsection{move()}
+{\footnotesize\ttfamily bool Ant\+::move (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{g,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks if an adjacent cell is occupied, and if not, randomly selects one and moves to that cell. 
+\begin{DoxyParams}{Parameters}
+{\em g} & The grid with the organisms \\
+\hline
+{\em n} & The number of cells on an edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if \doxyref{Ant}{p.}{classAnt} moved; false otherwise 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_a4d767696ff07b88656d35ceb3a0307e6}.
+
+
+
+References ant, Organism\+::col, down, empty, left, Organism\+::orig\+Col, Organism\+::orig\+Row, right, Organism\+::row, Grid\+::set\+Cell\+Occupant(), Organism\+::skip, stay, Organism\+::steps\+Since\+Breed, Organism\+::target\+Cell(), and up.
+
+
+
+Referenced by Tests2\+::ants\+Move\+Test(), and Production\+::one\+Ant\+Step().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant.\+h}\item 
+\textbf{ Ant.\+cpp}\end{DoxyCompactItemize}

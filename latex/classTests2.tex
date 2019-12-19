@@ -1,0 +1,580 @@
+\section{Tests2 Class Reference}
+\label{classTests2}\index{Tests2@{Tests2}}
+
+
+{\ttfamily \#include $<$Tests2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2} ()
+\item 
+bool \textbf{ do\+Tests} ()
+\item 
+bool \textbf{ run\+Production\+Test} ()
+\item 
+bool \textbf{ one\+Doodlebug\+Step\+Test} ()
+\item 
+bool \textbf{ one\+Ant\+Step\+Test} ()
+\item 
+bool \textbf{ grid\+Test} ()
+\item 
+bool \textbf{ get\+Cell\+Occupant\+Test} ()
+\item 
+bool \textbf{ set\+Cell\+Occupant\+Test} ()
+\item 
+bool \textbf{ get\+Cell\+Occupant\+Ptr\+Test} ()
+\item 
+bool \textbf{ init\+Grid\+Test} ()
+\item 
+bool \textbf{ print\+Grid} ()
+\item 
+bool \textbf{ get\+Occupant\+Test} ()
+\item 
+bool \textbf{ set\+Occupant\+Test} ()
+\item 
+bool \textbf{ get\+Occupant\+Ptr\+Test} ()
+\item 
+bool \textbf{ get\+Row\+Test} ()
+\item 
+bool \textbf{ get\+Col\+Test} ()
+\item 
+bool \textbf{ get\+Skip\+Test} ()
+\item 
+bool \textbf{ set\+Skip\+Test} ()
+\item 
+bool \textbf{ get\+Steps\+Since\+Breed\+Test} ()
+\item 
+bool \textbf{ target\+Cell\+Test} ()
+\item 
+bool \textbf{ make\+Ants\+Test} ()
+\item 
+bool \textbf{ ants\+Move\+Test} ()
+\item 
+bool \textbf{ ants\+Breed\+Test} ()
+\item 
+bool \textbf{ make\+Doodles\+Test} ()
+\item 
+bool \textbf{ doodle\+Move\+Test} ()
+\item 
+bool \textbf{ doodle\+Breed\+Test} ()
+\item 
+bool \textbf{ doodle\+Eat\+Test} ()
+\item 
+bool \textbf{ get\+Steps\+Since\+Ate\+Test} ()
+\item 
+virtual \textbf{ $\sim$\+Tests2} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classTests2_a6d7d8d248dd3d544199769baa1face60}} 
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\subsubsection{Tests2()}
+{\footnotesize\ttfamily Tests2\+::\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs a Test. \mbox{\label{classTests2_abed1a850ef511b7c06ae418cb3bbd5d9}} 
+\index{Tests2@{Tests2}!````~Tests2@{$\sim$\+Tests2}}
+\index{````~Tests2@{$\sim$\+Tests2}!Tests2@{Tests2}}
+\subsubsection{$\sim$\+Tests2()}
+{\footnotesize\ttfamily Tests2\+::$\sim$\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructs a Test. 
+
+Referenced by main().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classTests2_a21e7692afbdfb694caf370670cbeb7d4}} 
+\index{Tests2@{Tests2}!ants\+Breed\+Test@{ants\+Breed\+Test}}
+\index{ants\+Breed\+Test@{ants\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that an \doxyref{Ant}{p.}{classAnt} can breed and produce a new \doxyref{Ant}{p.}{classAnt} in an adjacent \doxyref{Cell}{p.}{classCell} \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise
+\end{DoxyReturn}
+Initial \doxyref{Grid}{p.}{classGrid}\+: 0123456789 0 -\/-\/-\/-\/-\/-\/-\/--- 0 1 -\/\+A\+A-\/\+A-\/-\/--- 1 A = \doxyref{Ant}{p.}{classAnt} 2 --A-\/-\/-\/-\/--- 2 D = \doxyref{Doodlebug}{p.}{classDoodlebug} 3 -\/-\/-\/-\/-\/-\/-\/--- 3 -\/ = empty 4 -\/-\/-\/-\/---A\+D-\/ 4 5 -\/-\/-\/---A\+A\+A-\/ 5 6 -\/-\/-\/-\/---A-- 6 7 -\/---A-\/-\/--- 7 8 -\/-\/-\/-\/-\/-\/-\/--- 8 9 -\/-\/-\/-\/-\/-\/---A 9 0123456789 
+
+References ant, Ant\+::breed(), doodlebug, Grid\+::get\+Cell\+Occupant(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7694d2797eba6fadc40234d527f6afbe}} 
+\index{Tests2@{Tests2}!ants\+Move\+Test@{ants\+Move\+Test}}
+\index{ants\+Move\+Test@{ants\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that an \doxyref{Ant}{p.}{classAnt} can move to an adjacent spot \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise
+\end{DoxyReturn}
+Initial \doxyref{Grid}{p.}{classGrid}\+: 0123456789 0 -\/-\/-\/-\/-\/-\/-\/--- 0 1 -\/\+A\+A-\/\+D-\/-\/--- 1 A = \doxyref{Ant}{p.}{classAnt} 2 --A-\/-\/-\/-\/--- 2 D = \doxyref{Doodlebug}{p.}{classDoodlebug} 3 -\/-\/-\/-\/-\/-\/-\/--- 3 -\/ = empty 4 -\/-\/-\/-\/---A-- 4 5 -\/-\/-\/---A\+A\+A-\/ 5 6 -\/-\/-\/-\/---A-- 6 7 -\/---A-\/-\/--- 7 8 -\/-\/-\/-\/-\/-\/-\/--- 8 9 -\/-\/-\/-\/-\/-\/---A 9 0123456789 
+
+References ant, doodlebug, Organism\+::get\+Col(), Organism\+::get\+Row(), Ant\+::move(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a317dc926bf93038f188c999df7a85682}} 
+\index{Tests2@{Tests2}!doodle\+Breed\+Test@{doodle\+Breed\+Test}}
+\index{doodle\+Breed\+Test@{doodle\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that a \doxyref{Doodlebug}{p.}{classDoodlebug} gives birth to a new \doxyref{Doodlebug}{p.}{classDoodlebug} in an adjacent \doxyref{Cell}{p.}{classCell} \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise
+\end{DoxyReturn}
+Initial \doxyref{Grid}{p.}{classGrid}\+: 0123456789 0 -\/-\/-\/-\/-\/-\/-\/--- 0 1 -\/\+A\+A-\/\+D-\/-\/--- 1 A = \doxyref{Ant}{p.}{classAnt} 2 --A-\/-\/-\/-\/--- 2 D = \doxyref{Doodlebug}{p.}{classDoodlebug} 3 -\/-\/-\/-\/-\/-\/-\/--- 3 -\/ = empty 4 -\/-\/-\/-\/---A\+D-\/ 4 5 -\/-\/-\/---A\+D\+D-\/ 5 6 -\/-\/-\/-\/---A-- 6 7 -\/---A-\/-\/--- 7 8 -\/-\/-\/-\/-\/-\/-\/--- 8 9 -\/-\/-\/-\/-\/-\/---D 9 0123456789 
+
+References ant, Doodlebug\+::breed(), doodlebug, Grid\+::get\+Cell\+Occupant(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_ae35f30e7d95e581cc4ce1316409c71ac}} 
+\index{Tests2@{Tests2}!doodle\+Eat\+Test@{doodle\+Eat\+Test}}
+\index{doodle\+Eat\+Test@{doodle\+Eat\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Eat\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Eat\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that a \doxyref{Doodlebug}{p.}{classDoodlebug} properly eats \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::get\+Cell\+Occupant(), Production\+::one\+Doodlebug\+Step(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a2143f2192836626e7214d37b504df381}} 
+\index{Tests2@{Tests2}!doodle\+Move\+Test@{doodle\+Move\+Test}}
+\index{doodle\+Move\+Test@{doodle\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that a \doxyref{Doodlebug}{p.}{classDoodlebug} can correctly move to an adjacent Dell \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise
+\end{DoxyReturn}
+Initial \doxyref{Grid}{p.}{classGrid}\+: 0123456789 0 -\/-\/-\/-\/-\/-\/-\/--- 0 1 -\/\+A\+A-\/\+D-\/-\/--- 1 A = \doxyref{Ant}{p.}{classAnt} 2 --A-\/-\/-\/-\/--- 2 D = \doxyref{Doodlebug}{p.}{classDoodlebug} 3 -\/-\/-\/-\/-\/-\/-\/--- 3 -\/ = empty 4 -\/-\/-\/-\/---A\+D-\/ 4 5 -\/-\/-\/---A\+D\+D-\/ 5 6 -\/-\/-\/-\/---A-- 6 7 -\/---A-\/-\/--- 7 8 -\/-\/-\/-\/-\/-\/-\/--- 8 9 -\/-\/-\/-\/-\/-\/---D 9 0123456789 
+
+References ant, doodlebug, Grid\+::get\+Cell\+Occupant(), Doodlebug\+::move(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7392382310966597d685c8aa3a4a2f88}} 
+\index{Tests2@{Tests2}!do\+Tests@{do\+Tests}}
+\index{do\+Tests@{do\+Tests}!Tests2@{Tests2}}
+\subsubsection{do\+Tests()}
+{\footnotesize\ttfamily bool Tests2\+::do\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Performs the tests. \begin{DoxyReturn}{Returns}
+true if all tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ants\+Breed\+Test(), ants\+Move\+Test(), doodle\+Breed\+Test(), doodle\+Eat\+Test(), doodle\+Move\+Test(), get\+Cell\+Occupant\+Ptr\+Test(), get\+Cell\+Occupant\+Test(), get\+Col\+Test(), get\+Occupant\+Ptr\+Test(), get\+Occupant\+Test(), get\+Row\+Test(), get\+Skip\+Test(), get\+Steps\+Since\+Ate\+Test(), get\+Steps\+Since\+Breed\+Test(), grid\+Test(), init\+Grid\+Test(), make\+Ants\+Test(), make\+Doodles\+Test(), one\+Ant\+Step\+Test(), one\+Doodlebug\+Step\+Test(), print\+Grid(), run\+Production\+Test(), set\+Cell\+Occupant\+Test(), set\+Occupant\+Test(), set\+Skip\+Test(), and target\+Cell\+Test().
+
+
+
+Referenced by main().
+
+\mbox{\label{classTests2_a2212e5e8179c34d08d392d72f7861046}} 
+\index{Tests2@{Tests2}!get\+Cell\+Occupant\+Ptr\+Test@{get\+Cell\+Occupant\+Ptr\+Test}}
+\index{get\+Cell\+Occupant\+Ptr\+Test@{get\+Cell\+Occupant\+Ptr\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Cell\+Occupant\+Ptr\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Cell\+Occupant\+Ptr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function correctly gets the pointer to a \doxyref{Cell}{p.}{classCell}. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::get\+Cell\+Occupant\+Ptr(), Organism\+::get\+Col(), Organism\+::get\+Row(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_af7092468fb374e2687f13170998e25be}} 
+\index{Tests2@{Tests2}!get\+Cell\+Occupant\+Test@{get\+Cell\+Occupant\+Test}}
+\index{get\+Cell\+Occupant\+Test@{get\+Cell\+Occupant\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Cell\+Occupant\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Cell\+Occupant\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function correctly gets the cell occupant type. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a4e8f3fec549826ab1f3e68c157fe07a8}} 
+\index{Tests2@{Tests2}!get\+Col\+Test@{get\+Col\+Test}}
+\index{get\+Col\+Test@{get\+Col\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Col\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Col\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function returns the correct column number that an \doxyref{Organism}{p.}{classOrganism} is occupying. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References Organism\+::get\+Col().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_ad8b6805a66d039a0abbfd23828d5f650}} 
+\index{Tests2@{Tests2}!get\+Occupant\+Ptr\+Test@{get\+Occupant\+Ptr\+Test}}
+\index{get\+Occupant\+Ptr\+Test@{get\+Occupant\+Ptr\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Occupant\+Ptr\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Occupant\+Ptr\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function returns the correct pointer to an \doxyref{Organism}{p.}{classOrganism}. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Organism\+::get\+Col(), Cell\+::get\+Occupant\+Ptr(), Organism\+::get\+Row(), Cell\+::set\+Occupant(), and Cell\+::$\sim$\+Cell().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a04dc1a9e75200929fb5365606f981a47}} 
+\index{Tests2@{Tests2}!get\+Occupant\+Test@{get\+Occupant\+Test}}
+\index{get\+Occupant\+Test@{get\+Occupant\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Occupant\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Occupant\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function correctly gets the \doxyref{Organism}{p.}{classOrganism} type of a c\+Cll. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Cell\+::get\+Occupant(), and Cell\+::set\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a73020e99dc356b1e5e94c43d09748af3}} 
+\index{Tests2@{Tests2}!get\+Row\+Test@{get\+Row\+Test}}
+\index{get\+Row\+Test@{get\+Row\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Row\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Row\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function returns the correct row number that the \doxyref{Organism}{p.}{classOrganism} is occupying. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References Organism\+::get\+Row().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a445d300432cc58396e8090e96b2f8230}} 
+\index{Tests2@{Tests2}!get\+Skip\+Test@{get\+Skip\+Test}}
+\index{get\+Skip\+Test@{get\+Skip\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Skip\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Skip\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the skip variable returns the correct value. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References Organism\+::get\+Skip(), and Organism\+::set\+Skip().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_abdbf5e30603584234924f4c8800e94fe}} 
+\index{Tests2@{Tests2}!get\+Steps\+Since\+Ate\+Test@{get\+Steps\+Since\+Ate\+Test}}
+\index{get\+Steps\+Since\+Ate\+Test@{get\+Steps\+Since\+Ate\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Steps\+Since\+Ate\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Steps\+Since\+Ate\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the number of steps since a \doxyref{Doodlebug}{p.}{classDoodlebug} ate is correct \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References doodlebug, Doodlebug\+::get\+Steps\+Since\+Ate(), Production\+::one\+Doodlebug\+Step(), Grid\+::set\+Cell\+Occupant(), Grid\+::$\sim$\+Grid(), and Production\+::$\sim$\+Production().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a677e77e398237e09838dfe9998c4af0a}} 
+\index{Tests2@{Tests2}!get\+Steps\+Since\+Breed\+Test@{get\+Steps\+Since\+Breed\+Test}}
+\index{get\+Steps\+Since\+Breed\+Test@{get\+Steps\+Since\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{get\+Steps\+Since\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::get\+Steps\+Since\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the number of steps since an \doxyref{Organism}{p.}{classOrganism} breed is correct. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, Organism\+::get\+Steps\+Since\+Breed(), Production\+::one\+Ant\+Step(), Grid\+::set\+Cell\+Occupant(), Grid\+::$\sim$\+Grid(), and Production\+::$\sim$\+Production().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_afe90de3a79c4105e63205cb8f019bbb2}} 
+\index{Tests2@{Tests2}!grid\+Test@{grid\+Test}}
+\index{grid\+Test@{grid\+Test}!Tests2@{Tests2}}
+\subsubsection{grid\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::grid\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests grid initialization and adding organisms. \begin{DoxyReturn}{Returns}
+true if test passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a01c2990964cc59c5c1366b3f296703a3}} 
+\index{Tests2@{Tests2}!init\+Grid\+Test@{init\+Grid\+Test}}
+\index{init\+Grid\+Test@{init\+Grid\+Test}!Tests2@{Tests2}}
+\subsubsection{init\+Grid\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::init\+Grid\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the \doxyref{Grid}{p.}{classGrid} is correctly initialized. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References empty, Grid\+::get\+Cell\+Occupant(), Grid\+::get\+Cell\+Occupant\+Ptr(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_aa4d40396194cf770aa82dc11b449ea62}} 
+\index{Tests2@{Tests2}!make\+Ants\+Test@{make\+Ants\+Test}}
+\index{make\+Ants\+Test@{make\+Ants\+Test}!Tests2@{Tests2}}
+\subsubsection{make\+Ants\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::make\+Ants\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that an \doxyref{Ant}{p.}{classAnt} can be created \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a0c6c7e5d60e7c6dc8799fa14e2b997b4}} 
+\index{Tests2@{Tests2}!make\+Doodles\+Test@{make\+Doodles\+Test}}
+\index{make\+Doodles\+Test@{make\+Doodles\+Test}!Tests2@{Tests2}}
+\subsubsection{make\+Doodles\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::make\+Doodles\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that a \doxyref{Doodlebug}{p.}{classDoodlebug} is correctly created \begin{DoxyReturn}{Returns}
+true if the test passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a6f2cc3067fa17fac9110b8e4a1b8ec06}} 
+\index{Tests2@{Tests2}!one\+Ant\+Step\+Test@{one\+Ant\+Step\+Test}}
+\index{one\+Ant\+Step\+Test@{one\+Ant\+Step\+Test}!Tests2@{Tests2}}
+\subsubsection{one\+Ant\+Step\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::one\+Ant\+Step\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that one time step for an \doxyref{Ant}{p.}{classAnt} can properly be executed.
+
+The board that will be tested\+: \begin{DoxyVerb}            -x-
+            --x
+            xo-
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Production\+::one\+Ant\+Step(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), Grid\+::$\sim$\+Grid(), and Production\+::$\sim$\+Production().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a6a8d0814d416498392ab6725f0318c80}} 
+\index{Tests2@{Tests2}!one\+Doodlebug\+Step\+Test@{one\+Doodlebug\+Step\+Test}}
+\index{one\+Doodlebug\+Step\+Test@{one\+Doodlebug\+Step\+Test}!Tests2@{Tests2}}
+\subsubsection{one\+Doodlebug\+Step\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::one\+Doodlebug\+Step\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that one time step for a \doxyref{Doodlebug}{p.}{classDoodlebug} can properly be executed.
+
+The board that will be tested (but has grid size of 20)\+: \begin{DoxyVerb}            -x-
+            --x
+            xo-
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Production\+::one\+Doodlebug\+Step(), Grid\+::set\+Cell\+Occupant(), Grid\+::$\sim$\+Grid(), and Production\+::$\sim$\+Production().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a5b7041c5a7149515f869ea40a6dd76d0}} 
+\index{Tests2@{Tests2}!print\+Grid@{print\+Grid}}
+\index{print\+Grid@{print\+Grid}!Tests2@{Tests2}}
+\subsubsection{print\+Grid()}
+{\footnotesize\ttfamily bool Tests2\+::print\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the \doxyref{Grid}{p.}{classGrid} can be correctly printed.
+
+The \doxyref{Grid}{p.}{classGrid} created will look like this\+: \begin{DoxyVerb}            --xo
+            -x-x
+            oxox
+            o--o
+    Where an 'x' is a doodlebug and an 'o' is an ant and '-' is a space
+\end{DoxyVerb}
+
+
+\begin{DoxyReturn}{Returns}
+true if tests passes (must be inspected manually) false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_af52d2f805bb50ea99430f38e2d32ce1d}} 
+\index{Tests2@{Tests2}!run\+Production\+Test@{run\+Production\+Test}}
+\index{run\+Production\+Test@{run\+Production\+Test}!Tests2@{Tests2}}
+\subsubsection{run\+Production\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::run\+Production\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the main production method functions properly. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References Production\+::run\+Production(), and Production\+::$\sim$\+Production().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_af93a738ea004cc4e91aa68c78965f156}} 
+\index{Tests2@{Tests2}!set\+Cell\+Occupant\+Test@{set\+Cell\+Occupant\+Test}}
+\index{set\+Cell\+Occupant\+Test@{set\+Cell\+Occupant\+Test}!Tests2@{Tests2}}
+\subsubsection{set\+Cell\+Occupant\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::set\+Cell\+Occupant\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function correctly sets the cell occupant type. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Cell\+::get\+Occupant(), Cell\+::set\+Occupant(), and Cell\+::$\sim$\+Cell().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a72fb4d90e6569ed55a13c62527a7868c}} 
+\index{Tests2@{Tests2}!set\+Occupant\+Test@{set\+Occupant\+Test}}
+\index{set\+Occupant\+Test@{set\+Occupant\+Test}!Tests2@{Tests2}}
+\subsubsection{set\+Occupant\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::set\+Occupant\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function correctly sets the \doxyref{Organism}{p.}{classOrganism} type of a \doxyref{Cell}{p.}{classCell}. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Cell\+::get\+Occupant(), Cell\+::set\+Occupant(), and Cell\+::$\sim$\+Cell().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_af194ea97ba940adb4c4917248d225a1f}} 
+\index{Tests2@{Tests2}!set\+Skip\+Test@{set\+Skip\+Test}}
+\index{set\+Skip\+Test@{set\+Skip\+Test}!Tests2@{Tests2}}
+\subsubsection{set\+Skip\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::set\+Skip\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the skip variable can be set correctly. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References Organism\+::get\+Skip(), and Organism\+::set\+Skip().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a0a638425910589ded1427ff3aad4e9be}} 
+\index{Tests2@{Tests2}!target\+Cell\+Test@{target\+Cell\+Test}}
+\index{target\+Cell\+Test@{target\+Cell\+Test}!Tests2@{Tests2}}
+\subsubsection{target\+Cell\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::target\+Cell\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Tests that the function returns the space an \doxyref{Organism}{p.}{classOrganism} should move to. Doodlebugs move to a \doxyref{Cell}{p.}{classCell} with an \doxyref{Ant}{p.}{classAnt} before moving to an empty cell. Ants move to any random \doxyref{Cell}{p.}{classCell}. If no empty Cells, the function returns 0. \begin{DoxyReturn}{Returns}
+true if tests passes; false otherwise 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, left, Grid\+::set\+Cell\+Occupant(), Organism\+::target\+Cell(), up, and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2.\+h}\item 
+\textbf{ Tests2.\+cpp}\end{DoxyCompactItemize}
